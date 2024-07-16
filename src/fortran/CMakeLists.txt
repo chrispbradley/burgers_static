@@ -1,5 +1,5 @@
 add_executable(burgers_static_fortran burgers_static.F90)
 
-target_link_libraries(burgers_static_fortran PRIVATE opencmisslibs)
+target_link_libraries(burgers_static_fortran PRIVATE OpenCMISS::libOpenCMISS_Fortran)
 
 install(TARGETS burgers_static_fortran DESTINATION bin)
