@@ -354,8 +354,8 @@ PROGRAM BurgersStatic
   CALL OC_Nodes_Initialise(nodes,err)
   CALL OC_Region_NodesGet(region,nodes,err)
   CALL OC_Nodes_NumberOfNodesGet(nodes,lastNodeNumber,err)
-  CALL OC_Decomposition_NodeDomainGet(decomposition,firstNodeNumber,1,firstNodeDomain,err)
-  CALL OC_Decomposition_NodeDomainGet(decomposition,lastNodeNumber,1,lastNodeDomain,err)
+  CALL OC_Decomposition_NodeDomainGet(decomposition,1,firstNodeNumber,firstNodeDomain,err)
+  CALL OC_Decomposition_NodeDomainGet(decomposition,1,lastNodeNumber,lastNodeDomain,err)
   IF(firstNodeDomain==computationalNodeNumber) THEN
     CALL OC_BoundaryConditions_SetNode(boundaryConditions,dependentField,OC_FIELD_U_VARIABLE_TYPE,1, &
       & OC_NO_GLOBAL_DERIV,firstNodeNumber,componentNumber,OC_BOUNDARY_CONDITION_FIXED, &
